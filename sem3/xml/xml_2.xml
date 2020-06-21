@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<!DOCTYPE myportfolio SYSTEM "xml_2.dtd">
+<myportfolio>
+  <myskills>
+	<skill in="html" value="not bad"/>
+	<skill in="css" value="not bad"/>
+	<skill in="js" value="not good"/>
+	<skill in="dom" value="do not know"/>
+	<skill in="react" value="that is that"/>
+  </myskills>
+</myportfolio>

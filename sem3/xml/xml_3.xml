@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!DOCTYPE statictics SYSTEM "xml_3.dtd">
+<statictics>
+  <MostView adress=""/>
+  <StaticSystems>
+	<Windows view-count=""/>
+	<Linux view-count=""/>
+	<MacOs view-count=""/>
+  </StaticSystems>
+  <PhoneSystems>
+	<iPhone view-count=""/>
+	<Android view-count=""/>
+	<Other view-count=""/>
+  </PhoneSystems>
+  <ips> 
+   <ip addr="" frequency=""/≻
+   <ip addr="" frequency=""/≻
+   <ip addr="" frequency=""/≻
+   <ip addr="" frequency=""/≻
+   <ip addr="" frequency=""/≻
+  </ips>
+</statictics>

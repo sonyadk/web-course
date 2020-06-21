@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet">
+	<title>Document</title>
+</head>
+<body>
+	<template id = "v"><style></style>♥️<span><slot name val="val">♥️</span></template>
+  <article>
+    <x-cntr val="1"><span slot ="val"></span></x-cntr> 
+    <x-cntr val="16"><span slot = "val"></span></x-cntr>
+  </article>
+  <script>{
+  
+  class Counter extends HTMLElement { 
+    constructor() {
+    	super();
+    const shadow = this.attachShadow({mode: 'open'});
+    const content = document.importNode(document.querySelector('#v').content, true);
+ article.addEventListener('click', (e) => {
+		let el = e.target.closest('x-cntr').querySelector('x-cntr');
+		let val = +(el.getAttribute('val')) + 1;
+		el.setAttribute('val', val);
+    	shadow.appendChild(content)
+    })
+  }
+  customElements.define('x-cntr', Counter);
+}</script>
+
+</body>
+</html>
+

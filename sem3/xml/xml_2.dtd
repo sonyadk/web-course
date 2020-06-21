@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<!ELEMENT myportfolio (myskill)+>
+<!ELEMENT myskill (skill)>
+<!ELEMENT skill (#PCDATA)>
+
+<!ATTLIST skill in CDATA #REQUIRED>
+<!ATTLIST skill value CDATA #REQUIRED>

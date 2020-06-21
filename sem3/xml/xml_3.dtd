@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!ELEMENT statictics (MostView, StaticSystems, PhoneSystems, ips)>
+<!ELEMENT MostView(#PCDATA)>
+
+<!ELEMENT StaticSystems (Windows, Linux, MacOs)>
+<!ELEMENT Windows(#PCDATA)>
+<!ELEMENT Linux(#PCDATA)>
+<!ELEMENT MacOs(#PCDATA)>
+
+<!ELEMENT PhoneSystems(iPhone, Android, Other)>
+<!ELEMENT iPhone(#PCDATA)>
+<!ELEMENT Android(#PCDATA)>
+<!ELEMENT Other(#PCDATA)>
+
+<!ELEMENT ips(ip)+>
+<!ELEMENT ip(#PCDATA)>
+
+<!ATTLIST MostView adress CDATA #REQUIRED>
+
+<!ATTLIST Windows view-count CDATA #REQUIRED>
+<!ATTLIST Linux view-count CDATA #REQUIRED>
+<!ATTLIST MacOs view-count CDATA #REQUIRED>
+
+<!ATTLIST iPhone view-count CDATA #REQUIRED>
+<!ATTLIST Android view-count CDATA #REQUIRED>
+<!ATTLIST Other view-count CDATA #REQUIRED>
+
+<!ATTLIST ip addr CDATA #REQUIRED>
+<!ATTLIST ip frequenьеcy CDATA #REQUIRED>
