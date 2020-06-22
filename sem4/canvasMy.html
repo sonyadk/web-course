@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>JavaScript</title><meta charset="utf-8">
+ </head>
+ <body>
+    <script src="/j/clicker"></script>
+    <script src="/j/out"></script>
+    <script src="/j/dblttl"></script>
+    <script>{ console.clear();
+      function makeCanvas(x, y) {
+ 		const canvas = document.createElement('canvas'),
+ 		ctx = canvas.getContext('2d');
+ 		canvas.setAttribute('width', x);
+ 		canvas.setAttribute('height', y);
+        
+ 		return { canvas, ctx };
+			}
+             let aMatrix = [[100,50],[50,100],[50,200],[100,200],[100,50],[50,150],[100,150]];
+             let bMatrix = [[150,50],[150,200],[200,200],[200,150],[150,120],[200,120],[200,80],[150,50]];
+             let dot1Matrix = [[110,200],[110,190],[120,190],[120,200],[110,200]];
+      new Clicker(async () => {
+		// код			
+		   
+    	const { canvas, ctx } = makeCanvas(300, 400);
+    	document.body.appendChild(canvas);     
+    	ctx.strokeStyle ='blue';
+        // C
+        ctx.moveTo(100,50);
+        ctx.lineTo(50,50);
+        ctx.lineTo(50,200);
+        ctx.lineTo(100,200);
+		// A
+        ctx.moveTo(200,50);
+        ctx.lineTo(150,100);
+        ctx.lineTo(150,200);
+        ctx.moveTo(200,200);
+        ctx.lineTo(200,50);
+        ctx.moveTo(150,150);
+        ctx.lineTo(200,150);
+         // dots
+        ctx.moveTo(110,200);
+        ctx.lineTo(110,190);
+        ctx.lineTo(120,190);
+        ctx.lineTo(120,200);
+        ctx.lineTo(110,200);
+       
+  
+        ctx.moveTo(210,200);
+        ctx.lineTo(210,190);
+        ctx.lineTo(220,190);
+        ctx.lineTo(220,200);
+        ctx.lineTo(210,200);
+        ctx.stroke();
+           
+        //curve
+
+		ctx.strokeStyle = '#83A';
+        ctx.beginPath();
+		ctx.moveTo(50,210);
+        ctx.bezierCurveTo(80, 250, 170, 250, 200, 210);
+		ctx.stroke();
+
+      }, 'Щёлкни');      
+  	 
+    
+    }</script>
+<!-- https://kodaktor.ru/?!=click_b5241 -->
+ </body>
+</html>
